@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  integuru:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: integuru-container
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL:-https://api.openai.com/v1}
+    ports:
+      - "11070:11070"
+    volumes:
+      - ./logs:/app/logs
+      - ./network_requests.har:/app/network_requests.har
+      - ./cookies.json:/app/cookies.json
