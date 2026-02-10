@@ -136,3 +136,22 @@ The tool uses a cloud-based LLM (OpenAI's GPT-4o and o1-preview models).
 
 ### LLM Training
 The LLM is not trained or improved by the usage of this tool.
+
+
+
+
+
+
+---
+
+## Docker Deployment
+
+This repository has been Dockerized for easy deployment.
+
+- **Official Repository**: [Integuru-AI/Integuru](https://github.com/Integuru-AI/Integuru)
+- **Dockerized by**: [llmsc-security](https://github.com/llmsc-security)
+- **Docker Image**: `Integuru-AI--Integuru_image`
+- **Container**: `Integuru-AI--Integuru_container`
+- **HTTP Service**: `http://127.0.0.1:11070`
+
+For Docker deployment and port mapping details, please visit our [Docker Directory](https://github.com/llmsc-security/docker-yuelin).
