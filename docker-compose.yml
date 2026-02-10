@@ -1,11 +1,11 @@
-version: "3.9"
-
 services:
-  integuru:
+  integuru-ai-integuru:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: integuru-container
+      args:
+        - IMAGE_NAME=integuru-ai-integuru_image
+    container_name: integuru-ai-integuru_container
     restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
@@ -16,5 +16,3 @@ services:
       - "11070:11070"
     volumes:
       - ./logs:/app/logs
-      - ./network_requests.har:/app/network_requests.har
-      - ./cookies.json:/app/cookies.json
