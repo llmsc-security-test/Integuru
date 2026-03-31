@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile
       args:
         - IMAGE_NAME=integuru-ai-integuru_image
+    network_mode: bridge
     container_name: integuru-ai-integuru_container
     restart: unless-stopped
     environment:
